@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.Sobre"
+             Title="Sobre" NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource Azul_piscina}">
+    
+    <VerticalStackLayout VerticalOptions="CenterAndExpand"
+                         Padding="10">
+        <Label 
+            Text="Sobre o Aplicativo"
+            Padding="20"
+            FontFamily="Kalam"
+            FontSize="40"
+            TextColor="{StaticResource Primary}"/>
+
+        <Frame Padding="10"
+       BackgroundColor="{StaticResource Azul_Claro}">
+            
+            <VerticalStackLayout>
+                
+                <Grid RowDefinitions="Auto, Auto, Auto"
+                      ColumnDefinitions="*, *">
+
+                    <Label Grid.Row="0" Grid.Column="0"
+                           Text="Desenvolvedor: "
+                           FontFamily="Kalam"/>
+
+                    <Label Grid.Row="0" Grid.Column="1"
+                           Text=" Fernando Tsuyoshi Baba"
+                           FontFamily="Kalam"/>
+
+                    <Label Grid.Row="1" Grid.Column="0"
+                           Text="Ano de Desenvolvimento: "
+                           FontFamily="Kalam"/>
+
+                    <Label Grid.Row="1" Grid.Column="1"
+                           Text=" 02/11/2024"
+                           FontFamily="Kalam"/>
+
+
+                </Grid>
+                <Button Text="Iniciar"
+                        Clicked="Button_Clicked"/>
+            </VerticalStackLayout>
+
+        </Frame>
+        
+    </VerticalStackLayout>
+    
+    
+</ContentPage>
