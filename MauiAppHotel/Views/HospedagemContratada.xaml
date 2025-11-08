@@ -17,14 +17,14 @@
                BackgroundColor="{StaticResource Azul_Claro}">
             <StackLayout  Orientation="Horizontal" >
                 <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
-                    <Label Text="Adultos: " />
-                    <Label Text="2" 
+                    <Label Text="Adultos: "  FontFamily="Kalam"/>
+                    <Label Text="2"  FontFamily="Kalam"
                            TextColor="{StaticResource Primary}" />
                 </HorizontalStackLayout>
 
                 <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
-                    <Label Text="Crianças: " />
-                    <Label Text="1" 
+                    <Label Text="Crianças: "  FontFamily="Kalam"/>
+                    <Label Text="1"  FontFamily="Kalam"
                            TextColor="{StaticResource Primary}" />
                 </HorizontalStackLayout>
             </StackLayout>
@@ -34,21 +34,21 @@
                BackgroundColor="{StaticResource Azul_Claro}">
             <Grid ColumnDefinitions="*, *, *"
                   RowDefinitions="Auto, Auto">
-                <Label Grid.Row="0" Grid.Column="0" Text="Check-in:" />
-                <Label Grid.Row="0" Grid.Column="1" Text="Check-out:" />
-                <Label Grid.Row="0" Grid.Column="2" Text="Estadia:" />
+                <Label Grid.Row="0" Grid.Column="0" Text="Check-in:" FontFamily="Kalam"/>
+                <Label Grid.Row="0" Grid.Column="1" Text="Check-out:"  FontFamily="Kalam"/>
+                <Label Grid.Row="0" Grid.Column="2" Text="Estadia:"  FontFamily="Kalam"/>
 
-                <Label Grid.Row="1" Grid.Column="0" Text="27/05/2025" />
-                <Label Grid.Row="1" Grid.Column="1" Text="30/05/2025" />
-                <Label Grid.Row="1" Grid.Column="2" Text="3" />
+                <Label Grid.Row="1" Grid.Column="0" Text="27/05/2025"  FontFamily="Kalam"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="30/05/2025" FontFamily="Kalam" />
+                <Label Grid.Row="1" Grid.Column="2" Text="3"  FontFamily="Kalam"/>
             </Grid>
         </Frame>
 
         <Frame Margin="10"
                BackgroundColor="{StaticResource Azul_Claro}">
             <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
-                <Label Text="Valor Total: " />
-                <Label Text="R$ 750,00" />
+                <Label Text="Valor Total: "  FontFamily="Kalam"/>
+                <Label Text="R$ 750,00"  FontFamily="Kalam"/>
             </HorizontalStackLayout>
         </Frame>
 
