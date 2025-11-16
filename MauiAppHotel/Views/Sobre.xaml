@@ -40,8 +40,13 @@
 
 
                 </Grid>
-                <Button Text="Iniciar"
-                        Clicked="Button_Clicked"/>
+                <Button Text="Contratação da Hospedagem"
+                        Clicked="Button_Clicked"
+                        Margin="10"
+                        />
+                <Button Text="Cadastro de Eventos"
+                        Clicked="Button_Clicked_1"
+                        Margin="10"/>
             </VerticalStackLayout>
 
         </Frame>

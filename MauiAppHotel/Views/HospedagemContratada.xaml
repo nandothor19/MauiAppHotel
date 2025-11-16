@@ -7,7 +7,7 @@
 
     <VerticalStackLayout VerticalOptions="CenterAndExpand">
 
-        <Label Text="Suíte Super Luxo"
+        <Label Text="{Binding QuartoSelecionado.Descricao}"
                TextColor="{StaticResource Primary}"
                FontFamily="Kalam"
                FontSize="50"
@@ -15,16 +15,16 @@
 
         <Frame Margin="10"
                BackgroundColor="{StaticResource Azul_Claro}">
-            <StackLayout  Orientation="Horizontal" >
+            <StackLayout  Orientation="Horizontal" HorizontalOptions="CenterAndExpand" >
                 <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                     <Label Text="Adultos: "  FontFamily="Kalam"/>
-                    <Label Text="2"  FontFamily="Kalam"
+                    <Label Text="{Binding QntAdultos}"  FontFamily="Kalam"
                            TextColor="{StaticResource Primary}" />
                 </HorizontalStackLayout>
 
                 <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                     <Label Text="Crianças: "  FontFamily="Kalam"/>
-                    <Label Text="1"  FontFamily="Kalam"
+                    <Label Text="{Binding QntCriancas}"  FontFamily="Kalam"
                            TextColor="{StaticResource Primary}" />
                 </HorizontalStackLayout>
             </StackLayout>
@@ -38,9 +38,17 @@
                 <Label Grid.Row="0" Grid.Column="1" Text="Check-out:"  FontFamily="Kalam"/>
                 <Label Grid.Row="0" Grid.Column="2" Text="Estadia:"  FontFamily="Kalam"/>
 
-                <Label Grid.Row="1" Grid.Column="0" Text="27/05/2025"  FontFamily="Kalam"/>
-                <Label Grid.Row="1" Grid.Column="1" Text="30/05/2025" FontFamily="Kalam" />
-                <Label Grid.Row="1" Grid.Column="2" Text="3"  FontFamily="Kalam"/>
+                <Label Grid.Row="1" Grid.Column="0"
+                       Text="{Binding DataCheckIn, StringFormat='{}{0:dd/MM/yyyy'}"  FontFamily="Kalam"
+                       TextColor="{StaticResource Primary}"/>
+                
+                <Label Grid.Row="1" Grid.Column="1"
+                       Text="{Binding DataCheckOut, StringFormat='{}{0:dd/MM/yyyy'}" FontFamily="Kalam"
+                       TextColor="{StaticResource Primary}"/>
+                
+                <Label Grid.Row="1" Grid.Column="2"
+                       Text="{Binding Estadia}"  FontFamily="Kalam"
+                       TextColor="{StaticResource Primary}"/>
             </Grid>
         </Frame>
 
@@ -48,7 +56,8 @@
                BackgroundColor="{StaticResource Azul_Claro}">
             <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                 <Label Text="Valor Total: "  FontFamily="Kalam"/>
-                <Label Text="R$ 750,00"  FontFamily="Kalam"/>
+                <Label Text="{Binding ValorTotal, StringFormat='{}{0:c'}"  FontFamily="Kalam"
+                       TextColor="{StaticResource Primary}"/>
             </HorizontalStackLayout>
         </Frame>
 

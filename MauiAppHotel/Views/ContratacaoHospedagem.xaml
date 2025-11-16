@@ -16,7 +16,7 @@
 
         <Frame Padding="10"
                BackgroundColor="{StaticResource Azul_Claro}">
-            <VerticalStackLayout>
+            <VerticalStackLayout Spacing="10">
                 <Grid RowDefinitions="Auto, Auto"
                       ColumnDefinitions="*, *, 2*">
 
@@ -52,7 +52,9 @@
                 </Grid>
 
                 <Label Text="Escolha sua Suíte"
-                       FontFamily="Kalam"/>
+                       FontFamily="Kalam"
+                       FontSize="Medium"
+                       TextColor="{StaticResource Primary}"/>
 
                 <Picker x:Name="pck_quarto"
                         Title="Selecione sua acomodação" 
@@ -62,9 +64,12 @@
                 <Frame Padding="10"
                        Margin="10"
                        BackgroundColor="{StaticResource Azul_Claro}">
-                    <VerticalStackLayout>
-
-                        <HorizontalStackLayout>
+                    <VerticalStackLayout Spacing="10">
+                        <Label Text="Período da Estadia"
+                               FontSize="Medium"
+                               TextColor="{StaticResource Primary}"/>
+                        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                                
                             <Label Text="Check-in:"
                                    FontFamily="Kalam"/>
                             <DatePicker x:Name="dtpck_checkin"
@@ -72,7 +77,7 @@
                                     Format="dd/MM/yyyy" />
                         </HorizontalStackLayout>
 
-                        <HorizontalStackLayout>
+                        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                             <Label Text="Check-out:"
                                    FontFamily="Kalam"/>
                             <DatePicker x:Name="dtpck_checkout"
@@ -82,11 +87,11 @@
 
                     </VerticalStackLayout>
                 </Frame>
-
+                <Button Text="Avançar" Clicked="Button_Clicked"/>
             </VerticalStackLayout>            
         </Frame>
 
-        <Button Text="Avançar" Clicked="Button_Clicked"/>
+        
 
     </VerticalStackLayout>
 </ContentPage>

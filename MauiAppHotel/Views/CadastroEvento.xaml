@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.CadastroEvento"
+             Title="CadastroEvento" NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource Azul_piscina}">
+
+
+    <VerticalStackLayout VerticalOptions="CenterAndExpand"
+                         Padding="10">
+
+        <Frame Padding="10"
+               BackgroundColor="{StaticResource Azul_Claro}">
+            <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto"
+                  ColumnDefinitions="*, 2*">
+                
+                <Label Text="Cadastro do Evento" Grid.Row="0" Grid.Column="0"/>
+                <Entry x:Name="NomeDoEvento" Grid.Row="0" Grid.Column="1" />
+
+                <Label Text="Local do Evento" Grid.Row="1" Grid.Column="0"/>
+                <Entry x:Name="LocalDoEvento" Grid.Row="1" Grid.Column="1" />
+
+                <Label Text="Data de Início" Grid.Row="2" Grid.Column="0"/>
+                <DatePicker x:Name="inicioDoEvento" Format="dd/MM/yyyy" Grid.Row="2" Grid.Column="1" />
+
+                <Label Text="Data de Fim do evento" Grid.Row="3" Grid.Column="0"/>
+                <DatePicker x:Name="fimDoEvento" Format="dd/MM/yyyy" Grid.Row="3" Grid.Column="1" />
+
+                
+                
+            </Grid>
+        
+        </Frame>
+
+        <Frame Padding="10"
+               BackgroundColor="{StaticResource Azul_Claro}">
+             <VerticalStackLayout>
+          
+                  <Grid RowDefinitions="Auto, Auto, Auto"
+                  ColumnDefinitions="*, 2*, *">
+           
+                
+                <Label Text="Número de participantes" 
+                       Grid.Row="0"
+                       Grid.Column="0"/>
+
+                    <Label Text="{Binding Value}"
+                           BindingContext="{x:Reference NumeroDeParticipante}"
+                           Grid.Row="0" Grid.Column="1"/>
+
+                    <Stepper x:Name="NumeroDeParticipante" 
+                         Maximum="1500" Minimum="500" Increment="1"
+                         Grid.Row="0" Grid.Column="2" />
+
+                    <Label Text="Custo por pessoa"
+                           Grid.Row="1" Grid.Column="0"/>
+
+                    <Label Text="{Binding Value}"
+       BindingContext = "{x:Reference ValorDeParticipante}"
+       Grid.Row="1" Grid.Column="1"/>
+
+                    <Stepper x:Name="ValorDeParticipante" 
+     Maximum="3000" Minimum="0" Increment="1"
+     Grid.Row="1" Grid.Column="2" />
+
+                </Grid>
+          
+              </VerticalStackLayout>
+            
+        </Frame>
+
+        <Button Text="Avançar" HorizontalOptions="CenterAndExpand" 
+                VerticalOptions="CenterAndExpand" Padding="15" 
+                Clicked="Button_Clicked"/>
+
+    </VerticalStackLayout>
+    
+</ContentPage>

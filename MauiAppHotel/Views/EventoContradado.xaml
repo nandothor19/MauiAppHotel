@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.EventoContradado"
+             Title="EventoContradado" NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource Azul_piscina}">
+
+    <VerticalStackLayout  VerticalOptions="CenterAndExpand"
+                         Padding="10">
+
+        <Label Text="{Binding NomeEvento}"
+                   TextColor="{StaticResource Primary}"
+                   FontFamily="Kalam"
+                   FontSize="50"
+                   HorizontalTextAlignment="Center"/>
+
+        <Frame   Margin="10"
+                 BackgroundColor="{StaticResource Azul_Claro}">
+            
+            <StackLayout  Orientation="Horizontal" HorizontalOptions="CenterAndExpand" >
+                
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                    
+                    <Label Text="Local: "  FontFamily="Kalam"/>
+                    <Label Text="{Binding LocalEvento}"  FontFamily="Kalam"
+                           TextColor="{StaticResource Primary}" />
+                    
+                </HorizontalStackLayout>
+                
+               
+            </StackLayout>
+            
+        </Frame>
+
+        <Frame Margin="10"
+        BackgroundColor="{StaticResource Azul_Claro}">
+
+            <Grid ColumnDefinitions="*, *"
+                      RowDefinitions="Auto, Auto">
+
+                <Label Grid.Row="0" Grid.Column="0" Text="Início do Evento" FontFamily="Kalam"/>
+                <Label Grid.Row="0" Grid.Column="1" Text="Fim do Evento"  FontFamily="Kalam"/>
+
+
+                <Label Grid.Row="1" Grid.Column="0"
+           Text="{Binding InicioEvento, StringFormat='{}{0:dd/MM/yyyy'}"  FontFamily="Kalam"
+           TextColor="{StaticResource Primary}"/>
+
+                <Label Grid.Row="1" Grid.Column="1"
+           Text="{Binding FimEvento, StringFormat='{}{0:dd/MM/yyyy'}" FontFamily="Kalam"
+           TextColor="{StaticResource Primary}"/>
+
+            </Grid>
+                </Frame>
+        <Frame Margin="10"
+        BackgroundColor="{StaticResource Azul_Claro}">
+            
+            <Grid ColumnDefinitions="*, *"
+                  RowDefinitions="Auto, Auto">
+
+                    <Label Grid.Row="0" Grid.Column="0"
+                           Text="Número de pessoas"/>
+                    <Label Grid.Row="1" Grid.Column="0"
+                           Text="{Binding NumeroParticipantes}"/>
+
+                <Label Grid.Row="0" Grid.Column="1"
+                       Text="Valor do Ingresso"/>
+                <Label Grid.Row="1" Grid.Column="1"
+                       Text="{Binding ValorParticipante}"/>
+
+            </Grid>
+                </Frame>
+            
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </VerticalStackLayout>
+</ContentPage>
