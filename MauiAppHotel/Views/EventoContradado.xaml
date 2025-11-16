@@ -55,7 +55,7 @@
         <Frame Margin="10"
         BackgroundColor="{StaticResource Azul_Claro}">
             
-            <Grid ColumnDefinitions="*, *"
+            <Grid ColumnDefinitions="*, *, *"
                   RowDefinitions="Auto, Auto">
 
                     <Label Grid.Row="0" Grid.Column="0"
@@ -68,52 +68,14 @@
                 <Label Grid.Row="1" Grid.Column="1"
                        Text="{Binding ValorParticipante}"/>
 
+                <Label Grid.Row="0" Grid.Column="2"
+        Text="Valor Total dos ingressos"/>
+                <Label Grid.Row="1" Grid.Column="2"
+        Text="{Binding ValorEventoTotal}"/>
+
             </Grid>
                 </Frame>
             
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     </VerticalStackLayout>
 </ContentPage>
